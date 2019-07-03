@@ -1,68 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+student can write a functioning react application
+student can write a functioning Express API
+Student can request data from Express API
+student can display data from Express API
 
-## Available Scripts
+# No-DB Review
 
-In the project directory, you can run:
 
-### `npm start`
+## frontend checklist
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- reset.css
+- package.json
+    - main: server => so we can type nodemon without giving file
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### proxy
+    - setupProxy.js
+        - :3008
 
-### `npm test`
+### dependencies
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- axios
+- http-proxy-middleware
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### front-end folder structure
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- src/
+    - App.js => class
+    - index.js
+    - components/
+        - leaderBoard.js
+        - Player.js
+        - RatioDisplayer.js
+        - PlayerForm.js
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# backend checklist
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### server folder-structure
 
-## Learn More
+- server/
+    - index.js
+    - controller/
+        - playerController.js
+        - gameController.js (if time)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### dependencies
+- express
+- axios
 
-### Code Splitting
+### routes
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+**playerController.js**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+get: '/api/cheetah'
+post: '/api/woodpecker'
+put: '/api/beaver/:id'
+delete: 'api/vulture/:id'
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### data
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```js
+const player = {
+id,
+name,
+campus,
+role,
+wins,
+losses
+}```
